@@ -30,7 +30,7 @@ Projeto de um site onde o usário possa capturar pokémons, batalhar contra pok�
 - [Express](https://expressjs.com/) - v5.1.0
 - Projeto:
     - Database - v1.4
-    - Back-end - v0
+    - Back-end - v1.2
     - Front-end - v0
     - Docker - v0
 
@@ -86,6 +86,6 @@ Projeto de um site onde o usário possa capturar pokémons, batalhar contra pok�
 
 ### Changelogs
 - [Database](./db-init/CHANGELOG.md)
-- Back-end
+- [Back-end](./back-end/CHANGELOG.md)
 - Front-end
 - Docker-compose
