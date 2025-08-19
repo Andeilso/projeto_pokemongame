@@ -84,4 +84,8 @@ Projeto de um site onde o usário possa capturar pokémons, batalhar contra pok�
         docker compose up
         ```
 
-
+### Changelogs
+- Database
+- Back-end
+- Front-end
+- Docker-compose
