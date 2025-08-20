@@ -1,0 +1,10 @@
+{
+    "scripts":{
+        "test": "cypress run",
+        "open": "cypress open",
+        "mobile:open" : "cypress open --config viewportWidth=375,viewportLength=768"
+    },
+  "devDependencies": {
+    "cypress": "^14.5.3"
+  }
+}

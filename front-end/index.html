@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Game</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container-principal">
+        <nav class="menu-principal">
+            <h2 class="ativo">Home</h2>
+            <h2>Batalha</h2>
+            <h2>PC</h2>
+            <h2>Pokedex</h2>
+        </nav>
+        <div class="boas-vindas esconder">
+            <h2><span>"</span>Bem-vindo novo treinador, </h2>
+            <p>pressione o botão abaixo para iniciar uma nova jornada.</p>
+
+            <button class="botao-iniciar-jornada">Iniciar Jornada</button>
+        </div>
+
+        <div class="novo-jogador esconder">
+            <h2>Cadastro de Jogador</h2>
+
+            <form id="form-jogador">
+                <div class="input-container-nome">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+
+                <div class="input-container-avatar">
+                    <h3>Avatar</h3>
+                    <div class="container-avatares">
+                        <label class="label-avatar">
+                            <img src="./assets/img/avatar/sprite_bianca.png" alt="">
+                            <input type="radio" id="avatar" name="avatar" value="sprite_bianca.png" checked>
+                        </label>
+                        <label class="label-avatar">
+                            <img src="./assets/img/avatar/sprite_hilbert.png" alt="">
+                            <input type="radio" id="avatar" name="avatar" value="sprite_hilbert.png">
+                        </label>
+                        <label class="label-avatar">
+                            <img src="./assets/img/avatar/sprite_hilda.png" alt="">
+                            <input type="radio" id="avatar" name="avatar" value="sprite_hilda.png">
+                        </label>
+                        <label class="label-avatar">
+                            <img src="./assets/img/avatar/sprite_n3.png" alt="">
+                            <input type="radio" id="avatar" name="avatar" value="sprite_n3.png">
+                        </label>
+                        <label class="label-avatar">
+                            <img src="./assets/img/avatar/sprite_red.gif" alt="">
+                            <input type="radio" id="avatar" name="avatar" value="sprite_red.gif">
+                        </label>
+                        <label class="label-avatar">
+                            <img src="./assets/img/avatar/sprite_silver.gif" alt="">
+                            <input type="radio" id="avatar" name="avatar" value="sprite_silver.gif">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="input-container-pokemon-inicial">
+                    <h3>Pokémon Inicial</h3>
+                    <div class="container-pokemons-iniciais">
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/001.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="001" checked>
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/004.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="004">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/007.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="007">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/152.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="152">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/155.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="155">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/158.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="158">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/252.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="252">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/255.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="255">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/258.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="258">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/387.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="387">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/390.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="390">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/393.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="393">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/495.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="495">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/498.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="498">
+                        </label>
+                        <label class="label-pokemon-inicial">
+                            <img src="./assets/img/pokemonSprite/501.png" alt="">
+                            <input type="radio" id="pokemon-inicial" name="pokemon-inicial" value="501">
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit">Emitir cartão de treinador</button>
+            </form>
+        </div>
+
+        <div class="cartao-treinador">
+            <img class="cartao-treinador__avatar" src="" alt="">
+
+            <div class="cartao-treinador__pokemon-container">
+                <div class="pokemon-container">
+                    <img src="" alt="" class="pokemon-imagem">
+                </div>
+
+                <div class="pokemon-container">
+                    <img src="" alt="" class="pokemon-imagem">
+                </div>
+
+                <div class="pokemon-container">
+                    <img src="" alt="" class="pokemon-imagem">
+                </div>
+
+                <div class="pokemon-container">
+                    <img src="" alt="" class="pokemon-imagem">
+                </div>
+
+                <div class="pokemon-container">
+                    <img src="" alt="" class="pokemon-imagem">
+                </div>
+
+                <div class="pokemon-container">
+                    <img src="" alt="" class="pokemon-imagem">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# PokemonGame v0.3.0
+# PokemonGame v0.4.3
 > Atenção! Este projeto foi criado apenas para fins de aprendizagem.
 
 Projeto de um site onde o usário possa capturar pokémons, batalhar contra pokémons e NPCs, visualizar pokemons e ganhar insignias.
@@ -31,7 +31,7 @@ Projeto de um site onde o usário possa capturar pokémons, batalhar contra pok�
 - Projeto:
     - Database - v1.4
     - Back-end - v1.2
-    - Front-end - v0
+    - Front-end - v1.3
     - Docker - v2
 
 ## Como inicializar o PokemonGame
@@ -87,5 +87,5 @@ Projeto de um site onde o usário possa capturar pokémons, batalhar contra pok�
 ### Changelogs
 - [Database](./db-init/CHANGELOG.md)
 - [Back-end](./back-end/CHANGELOG.md)
-- Front-end
+- [Front-end](./front-end/CHANGELOG.md)
 - [Docker-compose](./docker/CHANGELOG.md)
