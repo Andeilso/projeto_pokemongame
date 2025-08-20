@@ -1,0 +1,42 @@
+services:
+  db:
+    image: mysql:9.0
+    environment:
+      TZ: America/Sao_Paulo
+      MYSQL_ROOT_PASSWORD: docker123
+      MYSQL_DATABASE: db_pokemongame
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker123
+    ports:
+      - "3000:3306"
+    volumes:
+      - mysql_pokemongame_data:/var/lib/mysql
+      - ./db-init:/docker-entrypoint-initdb.d
+    networks:
+      - pokemongame-network
+
+  back-end:
+    image: node:24
+    working_dir: /app
+    volumes:
+      - ./back-end:/app
+    command: sh -c "npm install && npm start"
+    ports:
+      - "4000:4000"
+    environment:
+      DB_HOST: db
+      DB_USER: docker
+      DB_PASSWORD: docker123
+      DB_NAME: db_pokemongame
+    networks:
+      - pokemongame-network
+    depends_on:
+      - db
+
+volumes:
+  mysql_pokemongame_data:
+
+networks:
+    pokemongame-network:
+      driver: bridge
+
