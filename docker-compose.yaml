@@ -33,6 +33,17 @@ services:
     depends_on:
       - db
 
+  front-end:
+    image: nginx:alpine
+    volumes:
+      - ./front-end:/usr/share/nginx/html
+    ports:
+      - "5000:80"
+    networks:
+      - pokemongame-network
+    depends_on:
+      - back-end
+
 volumes:
   mysql_pokemongame_data:
 
