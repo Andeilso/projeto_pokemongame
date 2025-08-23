@@ -32,7 +32,7 @@ Projeto de um site onde o usário possa capturar pokémons, batalhar contra pok�
     - Database - v1.4
     - Back-end - v1.2
     - Front-end - v1.3
-    - Docker - v2
+    - Docker - v3
 
 ## Como inicializar o PokemonGame
 
