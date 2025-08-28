@@ -1,6 +1,34 @@
 # Changelog - Back-End
 Todas as alterações notáveis no back-end serão documentadas neste arquivo.
 
+## [1.3] - 2025-08-24
+### Resumo
+- Adição de dependência ao back-end.
+- Mudança na forma de importar e exportar arquivos (commonJS -> ES).
+- Alteração de controllers, destaque para 'cadastrarNovoUsuario' que adiciona o novo usuário e o pokemon inicial, ainda não finalizado.
+
+### Adicionado
+- package.json:
+    - Novo comando 'dev' em package.json que chama a api utilizando nodemon.
+    - Nova dependencia adicionada: 'uuid' para geração de ids para 'pokemons' e 'users';
+
+### Alteração
+- Mudança do uso de common.js para ES, alterando a exportação e importação do arquivos.
+- index.js:
+    - Mudança no root da api
+    - Permitindo que a aplicação do front-end faça requisições de Post, Update, Delete.
+- usersController.js:
+    - Comentários com etapas que quero fazer na api.
+    - 'postUser' - renomeado para 'cadastrarNovoUsuario', modificado para fazer alteração nas três tabelas 'users', 'pokemons' e 'pokemon_status'. (não finalizado)
+    - 'getUsers' - modificado para receber parametros de busca.
+    - 'deleteUser' Tratamento de erro em exclusão de usuário. (não finalizado)
+    - Alteração de chamada (por causa dos nomes de funções alteradas)
+- usersRoutes:
+    - Renomeado para routes.
+    - Alteração de chamada (por causa dos nomes de funções alteradas).
+
+
+
 ## [1.2] - 2025-08-17
 ### Resumo
 - Criação de um novo método 'DELETE' na rota api/users/:id que exclui o usuário passado no parametro da url.
@@ -10,6 +38,8 @@ Todas as alterações notáveis no back-end serão documentadas neste arquivo.
     - api/users/:id
         - Método: 'DELETE'
         - Descrição: Exclui um usuário com a id passada.
+
+
 
 ## [1.1] - 2025-08-17
 ### Resumo
@@ -21,6 +51,8 @@ Todas as alterações notáveis no back-end serão documentadas neste arquivo.
     - api/users
         - Método: 'POST'
         - Descrição: Cria um novo usuário.
+
+
 
 ## [1.0] - 2025-08-17
 ### Resumo
