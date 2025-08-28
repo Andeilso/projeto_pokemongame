@@ -1,6 +1,26 @@
 # Changelog - Database
 Todas as alterações notáveis no database serão documentadas neste arquivo.
 
+## [1.5] - 2025-08-24
+### Resumo
+- Adicionado uma nova seed para que a tabela items já tenha produtos cadastrados.
+- Agora a identificação do usuário e pokemon não será auto incrementado, será gerado no back-end, as tabelas foram alteradas para receber a nova indentificação.
+- Tamanho da descrição aumentada para receber texto maiores.
+- A tabela 'pokemon_status' estava recebendo a foreign key de forma errada, erro concertado.
+
+### Adicionado
+Seeds:
+    - seed_items
+
+### Alteração
+Tabelas:
+    - users
+    - items
+    - pokemons
+    - pokemon_status
+    - users_items
+
+
 ## [1.4] - 2025-08-19
 ### Resumo
 - Exclusão das tabelas `battle_pokemons` e `pc_pokemons`.
@@ -18,6 +38,8 @@ Todas as alterações notáveis no database serão documentadas neste arquivo.
     - battle_pokemons
     - pc_pokemons
 
+
+
 ## [1.3] - 2025-08-18
 ### Resumo
 - Criação da tabela `pokemons` para receber a criação do pokémon e para a criação e utilização da primary key pokemon_uuid.
@@ -32,6 +54,8 @@ Todas as alterações notáveis no database serão documentadas neste arquivo.
     - battle_pokemons
     - pc_pokemons
 
+
+
 ## [1.2] - 2025-08-17
 ### Resumo
 - Criação da tabela `pokemon_status` para separar os status da tabela `battle_pokemons `e `pc_pokemons`.
@@ -44,6 +68,8 @@ Todas as alterações notáveis no database serão documentadas neste arquivo.
 - Alteração nas tabelas:
     - battle_pokemons
     - pc_pokemons
+
+
 
 ## [1.1] - 2025-08-17
 ### Resumo
