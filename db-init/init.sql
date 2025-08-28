@@ -4,7 +4,7 @@
     users x items - Um usuário pode ter nenhum ou vários itens em sua mochila; (0:N)
 */
 CREATE TABLE users(
-    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_uuid CHAR(36) PRIMARY KEY,
     user_name VARCHAR(50) NOT NULL,
     avatar VARCHAR(100) NOT NULL,
     money INT NOT NULL DEFAULT 0
@@ -18,7 +18,7 @@ CREATE TABLE users(
 CREATE TABLE items(
     item_id INT PRIMARY KEY,
     item_name varchar(30),
-    item_description varchar(100)
+    item_description varchar(150)
 );
 
 /*
@@ -36,11 +36,11 @@ CREATE TABLE pokemons(
     sprite_back VARCHAR(100) NOT NULL,
     slot_number INT NOT NULL,
     storage_location ENUM('BATTLE', 'PC') NOT NULL,
-    user_id INT NOT NULL,
+    user_uuid CHAR(36) NOT NULL,
     item_id INT DEFAULT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
     FOREIGN KEY (item_id) REFERENCES items(item_id),
-    UNIQUE(user_id, storage_location, order_number)
+    UNIQUE(user_uuid, storage_location, slot_number)
 );
 
 /*
@@ -57,7 +57,8 @@ CREATE TABLE pokemon_status(
     special_defense INT NOT NULL,
     speed INT NOT NULL,
     iv INT NOT NULL,
-    PRIMARY KEY (pokemon_uuid) REFERENCES pokemons(pokemon_uuid)
+    PRIMARY KEY (pokemon_uuid),
+    FOREIGN KEY (pokemon_uuid) REFERENCES pokemons(pokemon_uuid)
 );
 
 
@@ -67,9 +68,9 @@ CREATE TABLE pokemon_status(
     users x items - Usuários pode possuir varios items e items podem pertencer a varios usuários. (N:N)
 */
 CREATE TABLE users_items(
-    user_id INT NOT NULL,
+    user_uuid CHAR(36) NOT NULL,
     item_id INT NOT NULL,
     quantity INT NOT NULL DEFAULT 1,
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
     FOREIGN KEY (item_id) REFERENCES items(item_id)
 );
