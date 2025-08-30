@@ -1,6 +1,22 @@
 # Changelog - Database
 Todas as alterações notáveis no database serão documentadas neste arquivo.
 
+## [1.6] - 2025-08-30
+### Resumo
+- Criação de view para trazer rapidamente todos os pokemons de todos os usuários cadastrados.
+- As tabelas 'pokemons' e 'pokemon_status' foram alterados, agora se um usuário for excluido do banco de dados, todos os pokemons e pokemons_status ligado ao usuário serão excluídos. 
+
+### Adicionado
+View
+    - v_all_users_pokemons
+
+### Alteração
+Tabelas
+    - pokemons
+    - pokemon_status
+
+
+
 ## [1.5] - 2025-08-24
 ### Resumo
 - Adicionado uma nova seed para que a tabela items já tenha produtos cadastrados.
@@ -19,6 +35,7 @@ Tabelas:
     - pokemons
     - pokemon_status
     - users_items
+
 
 
 ## [1.4] - 2025-08-19
