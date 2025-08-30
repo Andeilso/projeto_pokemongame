@@ -38,9 +38,11 @@ CREATE TABLE pokemons(
     storage_location ENUM('BATTLE', 'PC') NOT NULL,
     user_uuid CHAR(36) NOT NULL,
     item_id INT DEFAULT NULL,
-    FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
+    UNIQUE(user_uuid, storage_location, slot_number),
     FOREIGN KEY (item_id) REFERENCES items(item_id),
-    UNIQUE(user_uuid, storage_location, slot_number)
+    CONSTRAINT fk_user_pokmeon FOREIGN KEY (user_uuid)
+        REFERENCES users(user_uuid)
+        ON DELETE CASCADE
 );
 
 /*
@@ -48,7 +50,7 @@ CREATE TABLE pokemons(
     pokemon_status x pokemons - Um status pertence a um, e somente um, unico pokemon; (1,1)
 */
 CREATE TABLE pokemon_status(
-    pokemon_uuid CHAR(36) NOT NULL,
+    pokemon_uuid CHAR(36) NOT NULL PRIMARY KEY,
     pokemon_level INT NOT NULL,
     hp INT NOT NULL,
     attack INT NOT NULL,
@@ -57,8 +59,9 @@ CREATE TABLE pokemon_status(
     special_defense INT NOT NULL,
     speed INT NOT NULL,
     iv INT NOT NULL,
-    PRIMARY KEY (pokemon_uuid),
-    FOREIGN KEY (pokemon_uuid) REFERENCES pokemons(pokemon_uuid)
+    CONSTRAINT fk_pokemon_status FOREIGN KEY (pokemon_uuid)
+        REFERENCES pokemons(pokemon_uuid)
+        ON DELETE CASCADE
 );
 
 
@@ -74,3 +77,28 @@ CREATE TABLE users_items(
     FOREIGN KEY (user_uuid) REFERENCES users(user_uuid),
     FOREIGN KEY (item_id) REFERENCES items(item_id)
 );
+
+
+
+-- VIEWS
+CREATE VIEW v_all_users_pokemons AS
+SELECT p.user_uuid,
+       p.pokemon_uuid,
+       p.api_id,
+       p.pokemon_name,
+       p.shiny,
+       p.sprite_front,
+       p.sprite_back,
+       p.slot_number,
+       p.storage_location,
+       p.item_id,
+       ps.pokemon_level,
+       ps.hp,
+       ps.attack,
+       ps.defense,
+       ps.special_attack,
+       ps.special_defense,
+       ps.speed,
+       ps.iv
+FROM pokemons p
+INNER JOIN pokemon_status ps ON p.pokemon_uuid = ps.pokemon_uuid;
