@@ -1,4 +1,4 @@
-# PokemonGame v0.4.3
+# PokemonGame v0.4.7
 > Atenção! Este projeto foi criado apenas para fins de aprendizagem.
 
 Projeto de um site onde o usário possa capturar pokémons, batalhar contra pokémons e NPCs, visualizar pokemons e ganhar insignias.
@@ -29,8 +29,8 @@ Projeto de um site onde o usário possa capturar pokémons, batalhar contra pok�
 - [Node.js](https://nodejs.org/) - v24
 - [Express](https://expressjs.com/) - v5.1.0
 - Projeto:
-    - Database - v1.4
-    - Back-end - v1.2
+    - Database - v1.6
+    - Back-end - v1.4
     - Front-end - v1.3
     - Docker - v3
 
@@ -89,3 +89,15 @@ Projeto de um site onde o usário possa capturar pokémons, batalhar contra pok�
 - [Back-end](./back-end/CHANGELOG.md)
 - [Front-end](./front-end/CHANGELOG.md)
 - [Docker-compose](./docker/CHANGELOG.md)
+
+### Próximos passos
+- Backend:
+    - Retornar o pokemon completo para uso em local storage.
+    - Criar endpoint para items.
+    - Criar endpoint para pokemons.
+    - Criar endpoint pokedex para puxar todos os pokemons.
+- FrontEnd: 
+    - Criar a página home.
+    - Consumir a api e popular, com os dados, a tela home.
+    - Cria a página pokedex.
+    - Consumir a api e popular, com os dados, a tela pokedex.
