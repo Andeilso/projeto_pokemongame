@@ -1,6 +1,29 @@
 # Changelog - Back-End
 Todas as alterações notáveis no back-end serão documentadas neste arquivo.
 
+## [1.4] - 2025-08-30
+### Resumo
+- Post/Get/Delete de users está totalmente funcional.
+- Separação de controller, services e utils para melhor manutenção.
+
+### Adicionado
+- services
+    - userServices.js
+        - Services faz todas as configurações do banco de dados.
+- utils
+    - pokemonUtils.js
+        - Funções de pokemon que podem ser reutilizadas
+
+### Alteração
+- routes.js
+    - Alteração de chamada (por causa dos nomes de funções alteradas).
+- db.js
+    - Mudança do uso de common.js para ES, alterando a exportação e importação do arquivos.
+- usersController.js
+    - Controller agora só orquestra chamadas e se restrinnge a chamar função e enviar resposta.
+
+
+
 ## [1.3] - 2025-08-24
 ### Resumo
 - Adição de dependência ao back-end.
